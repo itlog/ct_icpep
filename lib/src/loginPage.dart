@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'Widget/logoContainer.dart';
 import 'package:comunitytracker/src/signup.dart';
 
+import 'home.dart';
+
 class LoginPage extends StatefulWidget {
   LoginPage({Key key, this.title}) : super(key: key);
 
@@ -42,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
+            context, MaterialPageRoute(builder: (context) => Home()));
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
