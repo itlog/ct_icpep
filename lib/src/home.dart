@@ -33,14 +33,13 @@ class _HomeState extends State<Home> {
           //onPressed: () => Navigator.of(context).pop(),
         ),
         title: Row(
-
           children: [
             Image.asset('assets/images/icpep.png',
               fit: BoxFit.contain,
               height: 45,
             ),
             Container(
-
+                alignment: Alignment.center,
                 padding: const EdgeInsets.all(8.0), child: Text('ICpEP Singapore',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: Colors.green[600]),) )
           ],
         ),
