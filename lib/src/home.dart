@@ -1,7 +1,7 @@
 import 'package:comunitytracker/src/ActiveTrip.dart';
 import 'package:comunitytracker/src/TabColor.dart';
 import 'package:flutter/material.dart';
-
+import 'package:barcode_scan/barcode_scan.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -45,6 +45,11 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: _children[_currentIndex], // new
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: new FloatingActionButton(
+        child: Icon(Icons.camera_alt),
+        onPressed: (){},
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex, // this will be set when a new tab is tapped
         selectedItemColor: Colors.black,
@@ -56,10 +61,7 @@ class _HomeState extends State<Home> {
             icon: new Icon(Icons.home),
             title: new Text('Home',style: TextStyle(color: Colors.green[700])),
           ),
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.camera_alt),
-            title: new Text('Scan',style: TextStyle(color: Colors.green[700])),
-          ),
+
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             title: new Text('Profile',style: TextStyle(color: Colors.green[700])),
